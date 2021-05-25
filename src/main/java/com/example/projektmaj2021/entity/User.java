@@ -1,12 +1,9 @@
 package com.example.projektmaj2021.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-// lägg till här: @Table(name = "users")
+@Table(name = "users")
 public class User extends Person{
 
     @Id
@@ -16,31 +13,38 @@ public class User extends Person{
     private String password;
     private String salt;
     private String img;
-
+    //@Column(name="username")
     public User() {
     }
 
     public long getId() {
         return id;
     }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+    public void setId(long id) { this.id = id; }
 
     public String getUsername() {
         return username;
     }
-
-    public void setUsername(String description) {
-        this.username = description;
+    public void setUsername(String name) {
+        this.username = name;
     }
 
-    @Override
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getSalt() { return salt; }
+    public void setSalt(String salt) { this.salt = salt; }
+
+    public String getImg() { return img; }
+
+    public void setImg(String img) { this.img = img; }
+
+
+ /**   @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", description='" + username + '\'' +
                 '}';
-    }
+    }*/
 }

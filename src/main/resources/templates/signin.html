@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +21,7 @@
           background-color:darkslategray;
           margin-left: 50px;
       }
-      h4{
+      h5{
           color: rgb(50, 247, 10);
           background-color: darkslategray;
       }
@@ -32,14 +33,23 @@
 <body>
     <div class="Login">
         <h1>sign in</h1>
-            <h4 class="usernameinput">Enter your username:</h4>
+        <h5 class="usernameInput">Enter your username and password below:</h5>
+        <form th:action="@{/saveUser}" th:object="${user}" method="POST">
+            <!-- <h5 class="usernameinput">Enter your username:</h5>  -->
+            <input type="text" placeholder="username" th:field="*{name}">
+            <input type="text" placeholder="**password**" th:field="*{password}">
+            <input type="submit" value="Login" th:name="loginButton">
+        </form>
+        <h5>not registered yet?</h5>
+        <nav>
+            <a href="http://localhost:63342/ProjektMaj2021/templates/signup.html?_ijt=4j86fffreck5qi059ir9s06kli">
+                Click here to go to registration...</a>
+        </nav>
 
-            <div class="textarea-container">
-                <textarea name="textarea-username" class="textarea-username" id="textarea-username" cols="200" rows="1">username...</textarea>
-            </div>
-
-
-            <h4 class="PasswordInput">Enter your username:</h4>
+<!--            <div class="textarea-container">
+                <textarea name="textarea-username" class="textarea-username" id="textarea-username"
+                          cols="200" rows="1">username...</textarea>
+            </div>-->
 
 
     </div>
