@@ -17,20 +17,35 @@
 
     <!-- todo: =================================================-->
     <!-- todo: linka/skapa: bootstrap, Jquery, stylesheet(.css) =DONE= -->
-    <!-- todo: =================================================-->
+    <!-- todo: Knappar och textareas och logik till det -->
+    <!-- todo: ================================================= -->
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        h1{
+            color:rgb(50, 247, 10);
+            background-color:darkslategray;
+        }
+        h4{
+            color: rgb(50, 247, 10);
+            background-color: darkslategray;
+        }
+    </style>
 
 </head>
 
 <body>
     <div class="welcome">
-        <h1>Welcome to springboot-social-network-thingy!</h1>
+        <h1>Welcome to springboot-social-network-site!</h1>  <!-- Texten högst upp -->
         <h4>Already a member?</h4>
+        <nav>
+            <a href="http://localhost:63342/ProjektMaj2021/templates/signin.html?_ijt=j7amjqf9irdn0maraaqq3lefmi">Click here to Login</a>
 
-        <button type="button" th:target="@{'/signin'}"> <!-- TODO: ADD TARGET/REDIRECT TO BTNS-->
-            Sign in
-        </button>
+            <!-- TODO: ADD TARGET/REDIRECT TO BTNS-->
+        </nav>
+
+        
 
         <h4>Otherwise:</h4>
         <button>Create Account</button>
