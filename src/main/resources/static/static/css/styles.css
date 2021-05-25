@@ -1,0 +1,25 @@
+body {
+    box-sizing: border-box;
+    background: rgba(6, 6, 6, 0.03);
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+}
+
+h3{
+    color: darkgreen;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+.welcome {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 25px;
+}

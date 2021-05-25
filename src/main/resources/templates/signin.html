@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign In</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous" defer>
+  </script>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+      h1{
+          color:rgb(50, 247, 10);
+          background-color:darkslategray;
+          margin-left: 50px;
+      }
+      h5{
+          color: rgb(50, 247, 10);
+          background-color: darkslategray;
+      }
+  </style>
+
+
+
+</head>
+<body>
+    <div class="Login">
+        <h1>sign in</h1>
+        <h5 class="usernameInput">Enter your username and password below:</h5>
+        <form th:action="@{/saveUser}" th:object="${user}" method="POST">
+            <!-- <h5 class="usernameinput">Enter your username:</h5>  -->
+            <input type="text" placeholder="username" th:field="*{name}">
+            <input type="text" placeholder="**password**" th:field="*{password}">
+            <input type="submit" value="Login" th:name="loginButton">
+        </form>
+        <h5>not registered yet?</h5>
+        <nav>
+            <a href="http://localhost:63342/ProjektMaj2021/templates/signup.html?_ijt=4j86fffreck5qi059ir9s06kli">
+                Click here to go to registration...</a>
+        </nav>
+
+<!--            <div class="textarea-container">
+                <textarea name="textarea-username" class="textarea-username" id="textarea-username"
+                          cols="200" rows="1">username...</textarea>
+            </div>-->
+
+
+    </div>
+
+
+</body>
+</html>
