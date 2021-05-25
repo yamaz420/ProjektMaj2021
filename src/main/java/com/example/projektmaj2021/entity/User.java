@@ -6,12 +6,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+// lägg till här: @Table(name = "users")
+public class User extends Person{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String description;
+    private String username;
+    private String password;
+    private String salt;
+    private String img;
 
     public User() {
     }
@@ -24,19 +28,19 @@ public class User {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getUsername() {
+        return username;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUsername(String description) {
+        this.username = description;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", description='" + description + '\'' +
+                ", description='" + username + '\'' +
                 '}';
     }
 }

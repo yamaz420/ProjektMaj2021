@@ -8,7 +8,7 @@
 <body>
 
 <form th:action="@{/saveUser}" th:object="${user}" method="GET">
-    <input type="text" placeholder="Beskrivning" th:field="*{description}"><br>
+    <input type="text" placeholder="Beskrivning" th:field="*{username}"><br>
     <input type="submit" value="Registrera Användare">
 </form>
 
