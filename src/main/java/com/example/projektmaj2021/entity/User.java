@@ -36,7 +36,6 @@ public class User extends Person{
     public void setSalt(String salt) { this.salt = salt; }
 
     public String getImg() { return img; }
-
     public void setImg(String img) { this.img = img; }
 
 
