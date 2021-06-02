@@ -20,8 +20,27 @@
 
 </head>
 <body>
+<h1>Register new account</h1>
+    <form name="signup" th:action="@{/save-user}" th:object="${user}" method="POST">
+        <h5>Enter username:</h5>
+        <input type="text" placeholder="username" th:field="*{username}">
 
-<h1>In development..</h1>
+        <h5>Enter password:</h5>
+        <input type="text" placeholder="**password**" th:field="*{password}">
+
+        <h5>confirm password:</h5>
+        <input type="text" placeholder="**confirm password**" th:field="*{password}">
+
+
+        <button type="submit" name="signupbtn">Register</button>
+
+    </form>
+
+<!-- <input class="form-control" type="text ....
+        <div class="form-group" ...
+
+-->
+
 
 <form th:action=""></form>
 
