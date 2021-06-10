@@ -5,6 +5,16 @@ body {
     -ms-overflow-style: none;
 }
 
+h1{
+     color:rgb(50, 247, 10);
+     background-color:darkslategray;
+     margin-left: 50px;
+}
+h5{
+    color: rgb(50, 247, 10);
+    background-color: darkslategray;
+}
+
 h3{
     color: darkgreen;
 }
