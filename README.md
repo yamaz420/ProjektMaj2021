@@ -7,7 +7,7 @@ Basic Web-forum-application based on java Spring Boot MVC
 This program is structured after Model-View-Controller,
 where View here is HTML(frontend)
 
-OBS: branch named "InteMaster" is, contrary to its name, the main branch.
+OBS: branch named "InteMaster" is, contrary to its name, the main branch i've worked in (commits).
 
 Deploy the App locally:
 
